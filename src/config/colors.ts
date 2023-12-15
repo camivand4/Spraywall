@@ -1,4 +1,4 @@
-const colors = {
+const Colors = {
   background: {
     dark: "#161616",
     light: "#323232",
@@ -14,4 +14,4 @@ const colors = {
   bothHands: "#FF33E9", // Color for both hands
 };
 
-export default colors;
+export default Colors;
