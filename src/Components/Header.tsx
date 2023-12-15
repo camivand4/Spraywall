@@ -1,6 +1,19 @@
+import styled from "styled-components";
+
+const StyledHeader = styled.div`
+  padding-block: 1rem;
+  background-color: green;
+
+  h1 {
+    font-size: 3rem;
+    background: transparent;
+  }
+`;
 
 export default function Header() {
   return (
-    <div>Header</div>
-  )
+    <StyledHeader>
+      <h1>Header</h1>
+    </StyledHeader>
+  );
 }

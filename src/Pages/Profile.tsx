@@ -1,5 +1,10 @@
+import TextField from "../Components/TextField";
+
 export default function Profile() {
   return (
-    <div>Profile</div>
+    <>
+      <div>Profile</div>
+      <TextField placeholder="test" />
+    </>
   )
 }
