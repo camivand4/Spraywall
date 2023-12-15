@@ -29,6 +29,7 @@ const holdsColors = {
   right: '#33FF57', // Color for right
   neutral: '#337AFF', // Color for neutral
   bothHands: '#FF33E9', // Color for both hands
+  
 };
 
 function App() {
