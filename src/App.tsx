@@ -1,4 +1,4 @@
-import { createTheme, ThemeProvider } from '@mui/material';
+import { createTheme, ThemeProvider, Box } from '@mui/material';
 import { Routes, Route } from 'react-router-dom';
 
 import Home from './Pages/Home';
@@ -46,7 +46,6 @@ function App() {
         <Route path="/gyms/:id/:boulder" element={<Boulder />} />
         <Route path="/auth" element={<Auth />} />
       </Routes>
-
     </ThemeProvider>
   );
 }
