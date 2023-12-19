@@ -1,12 +1,19 @@
 import styled from "styled-components";
 import Colors from "../config/colors";
 
+const HiddenText = styled.div`
+  color: ${Colors.background.light};
+`;
+
 const StyledHeader = styled.div`
-  padding-block: 1rem;
+  padding: 1rem 2rem;
   background-color: ${Colors.background.light};
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   h1 {
-    font-size: 3rem;
+    font-size: 1.5rem;
     background: transparent;
     padding: 0 2rem;
   }
@@ -15,7 +22,10 @@ const StyledHeader = styled.div`
 export default function Header() {
   return (
     <StyledHeader>
+      <div>test</div>
+      
       <h1>Header</h1>
+      <HiddenText>test</HiddenText>
     </StyledHeader>
   );
 }

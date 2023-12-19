@@ -10,6 +10,7 @@ const TextField = styled.input`
 
   padding-inline: 2rem;
   border: 0;
+  font-size: 1.2rem;
 `;
 
 export default TextField;
