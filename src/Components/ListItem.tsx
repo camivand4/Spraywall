@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Colors from "../config/colors";
 
-const ListItemStyle = styled.div`
+const ListItemStyle = styled.li`
   display: flex;
   flex-direction: column;
 

@@ -1,8 +1,9 @@
 import ListItem from "../Components/ListItem";
+import BaseLayout from "../layouts/BaseLayout";
 
 export default function Gyms() {
   return (
-    <div>
+    <BaseLayout>
       {/* <Link to="/gyms/1">Gym1</Link>
       <Link to="/gyms/2">Gym2</Link>
       <Link to="/gyms/3">Gym3</Link> */}
@@ -22,6 +23,6 @@ export default function Gyms() {
         <ListItem sectionLeft="7a" title="Gym 2" to="/gyms/2" />
         <ListItem sectionLeft="7a" title="Gym3" to="/gyms/3" />
       </ul>
-    </div>
+    </BaseLayout>
   );
 }
