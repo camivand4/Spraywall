@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import Colors from "../config/colors";
+import BackButton from "./BackButton";
 
-const HiddenText = styled.div`
-  color: ${Colors.background.light};
+const HiddenBack = styled.div`
+  width: 1.2rem;
 `;
 
 const StyledHeader = styled.div`
@@ -22,10 +23,10 @@ const StyledHeader = styled.div`
 export default function Header() {
   return (
     <StyledHeader>
-      <div>test</div>
+      <BackButton></BackButton>
       
       <h1>Header</h1>
-      <HiddenText>test</HiddenText>
+      <HiddenBack></HiddenBack>
     </StyledHeader>
   );
 }
