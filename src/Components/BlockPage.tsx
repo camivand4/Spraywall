@@ -1,7 +1,12 @@
 import styled from 'styled-components';
 
-const BlockName = styled.div`
-    padding: 2.5rem 2rem;
+interface BlockPageProps {
+  ypadding?: string;
+  xpadding?: string;
+}
+
+const BlockPage = styled.div<BlockPageProps>`
+  padding: ${(props) => props.ypadding || '2.5rem'} ${(props) => props.xpadding || '2rem'};
 `;
 
-export default BlockName;
+export default BlockPage;
