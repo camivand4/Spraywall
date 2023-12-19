@@ -7,6 +7,7 @@ const StyledHeader = styled.div`
   h1 {
     font-size: 3rem;
     background: transparent;
+    padding: 0 2rem;
   }
 `;
 
