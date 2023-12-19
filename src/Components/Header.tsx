@@ -6,7 +6,7 @@ const HiddenBack = styled.div`
   width: 1.2rem;
 `;
 
-const StyledHeader = styled.div`
+const StyledHeader = styled.header`
   padding: 1rem 2rem;
   background-color: ${Colors.background.light};
   display: flex;

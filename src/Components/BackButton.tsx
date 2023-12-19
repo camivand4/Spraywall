@@ -1,7 +1,7 @@
 import ArrowBackRoundedIcon from '@mui/icons-material/ArrowBackRounded';
 import Colors from '../config/colors';
 import styled from 'styled-components';
-import { useHistory } from 'react-router-dom'; 
+import {useNavigate} from 'react-router-dom';
 
 const DarkBackgroundColor = Colors.background.dark;
 
@@ -17,13 +17,9 @@ const StyledArrowBack = styled(ArrowBackRoundedIcon)`
 `;
 
 const BackButton = () => {
-  const history = useHistory(); 
+    const navigate = useNavigate();
 
-  const handleClick = () => {
-    history.goBack(); 
-  };
-
-  return <StyledArrowBack onClick={handleClick} />;
+    return <StyledArrowBack onClick={() => navigate(-1)}/>;
 };
 
 export default BackButton;
