@@ -1,12 +1,20 @@
 import styled from "styled-components";
 import Colors from "../config/colors";
+import BackButton from "./BackButton";
 
-const StyledHeader = styled.div`
-  padding-block: 1rem;
+const HiddenBack = styled.div`
+  width: 1.2rem;
+`;
+
+const StyledHeader = styled.header`
+  padding: 1rem 2rem;
   background-color: ${Colors.background.light};
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   h1 {
-    font-size: 3rem;
+    font-size: 1.5rem;
     background: transparent;
     padding: 0 2rem;
   }
@@ -15,7 +23,10 @@ const StyledHeader = styled.div`
 export default function Header() {
   return (
     <StyledHeader>
+      <BackButton></BackButton>
+      
       <h1>Header</h1>
+      <HiddenBack></HiddenBack>
     </StyledHeader>
   );
 }
