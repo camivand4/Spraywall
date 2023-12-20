@@ -1,6 +1,5 @@
 import List from "../Components/List";
 import ListItem from "../Components/ListItem";
-import BaseLayout from "../layouts/BaseLayout";
 
 export default function Gyms() {
   return (
