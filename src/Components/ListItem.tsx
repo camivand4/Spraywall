@@ -20,6 +20,7 @@ const ListItemStyle = styled.li `
   a {
     color: #fff;
     text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transition effect for color changes */
 
     /* Flexbox layout for the anchor tag and its children */
     display: flex;
@@ -46,6 +47,12 @@ const ListItemStyle = styled.li `
     /* Styling for the second child within the anchor tag */
     :nth-child(2) {
       margin-block: auto;
+    }
+    
+    /* Hover effect styles */
+    &:hover {
+      background-color: ${Colors.background.light}; /* Change background color on hover */
+      border-radius: 5px;
     }
   }
 `;
