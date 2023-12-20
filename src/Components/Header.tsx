@@ -48,6 +48,7 @@ const getPageTitle = (pathname: string) => {
   }
 };
 
+
 export default function Header() {
   const location = useLocation();
   const pageTitle = getPageTitle(location.pathname);
