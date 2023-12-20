@@ -11,6 +11,7 @@ export default function Gyms() {
           sectionLeft={i.image}
           text={i.name}
           to={i.id.toString()}
+          key={i.id.toString()}
         ></ListItem>
       ))}
     </List>
