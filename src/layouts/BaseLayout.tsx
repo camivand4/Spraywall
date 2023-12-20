@@ -6,7 +6,7 @@ type Props = {
 };
 
 const BaseLayoutStyle = styled.div`
-  padding-inline: 2rem;
+  padding: 2.5rem 2rem;
 `;
 
 const BaseLayout = ({ children }: Props) => {
