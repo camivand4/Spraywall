@@ -1,22 +1,20 @@
-import { Box } from "@mui/material";
-import Header from "../Components/Header";
+import { Link } from "react-router-dom";
+import Button from "../Components/Button";
 
 export default function Home() {
   return (
     <>
-        <div>Home</div>
-        <Header></Header>
-        <Box sx={{
-        height: '300px',
-        width: {
-            xs: 100,
-            sm: 200,
-            md: 300,
-            lg: 400,
-            xl: 500,
-        },
-        bgcolor: 'secondary.light'
-        }}></Box>
+      <Button>send</Button>
+      <br />
+      <Link to="profile">Profile</Link>
+      <br />
+      <Link to="gyms">gyms</Link>
+      <br />
+      <Link to="gym">gym</Link>
+      <br />
+      <Link to="auth">auth</Link>
+      <br />
+      <Link to="boulder">boulder</Link>
     </>
-  )
+  );
 }

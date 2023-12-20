@@ -1,48 +1,35 @@
-import { createTheme, ThemeProvider } from '@mui/material';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route } from "react-router-dom";
 
-import Home from './Pages/Home';
-import Profile from './Pages/Profile';
-import Auth from './Pages/Auth';
-
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: '#161616', // Background
-      contrastText: '#fff', // Text on primary background
-    },
-    secondary: {
-      main: '#981DF8', // Accent color
-      contrastText: '#fff', // Text on secondary background
-    },
-    background: {
-      default: '#323232', // Lighter backgrounds and borders
-    },
-    text: {
-      primary: '#fff', // Text on #161616, #323232, #981DF8 backgrounds
-    },
-  }
-});
-
-const holdsColors = {
-  left: '#FF5733', // Color for left
-  right: '#33FF57', // Color for right
-  neutral: '#337AFF', // Color for neutral
-  bothHands: '#FF33E9', // Color for both hands
-};
+import Home from "./Pages/Home";
+import Profile from "./Pages/Profile";
+import Auth from "./Pages/Auth";
+import Gym from "./Pages/Gym";
+import Gyms from "./Pages/Gyms";
+import Boulder from "./Pages/Boulder";
+import BaseLayout from "./layouts/BaseLayout";
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/auth" element={<Auth />} />
-      </Routes>
+    <>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Roboto:wght@100&family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet"
+      ></link>
 
-    </ThemeProvider>
+      <BaseLayout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/gyms" element={<Gyms />} />
+          <Route path="/gyms/:id" element={<Gym />} />
+          <Route path="/gyms/:id/:boulder" element={<Boulder />} />
+          <Route path="/auth" element={<Auth />} />
+        </Routes>
+      </BaseLayout>
+    </>
   );
 }
 
-
-export default App
+export default App;
