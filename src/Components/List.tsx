@@ -14,8 +14,7 @@ const ListStyle = styled.ul<ListStyleProps>`
   flex-direction: column;
   justify-content: center;
 
-  padding-top: 2.5rem;
-  padding-top: ${(props) => props.paddingTop || "2.5rem"};
+  padding-top: ${(props) => props.paddingTop || "0"};
   padding-bottom: ${(props) => props.paddingBottom || "0"};
 `;
 
