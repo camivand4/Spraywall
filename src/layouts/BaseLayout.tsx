@@ -1,8 +1,10 @@
 import styled from "styled-components";
 import Header from "../Components/Header";
+import { useLocation } from "react-router-dom";
 
 type Props = {
   children: JSX.Element;
+  isBoulder: boolean;
 };
 
 const BaseLayoutStyle = styled.div`
@@ -10,10 +12,16 @@ const BaseLayoutStyle = styled.div`
 `;
 
 const BaseLayout = ({ children }: Props) => {
+  const location = useLocation();
+  const isBoulder = location.pathname === "/boulder";
+
   return (
     <>
-      <Header></Header>
+      {!isBoulder && (
+        <Header></Header>
+      )}
       <BaseLayoutStyle>{children}</BaseLayoutStyle>
+
     </>
   );
 };

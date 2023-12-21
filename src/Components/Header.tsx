@@ -69,7 +69,7 @@ export default function Header() {
     <StyledHeader isHomePage={isHomePage}>
       {!isHomePage && <BackButton />} {/* Render BackButton if not on home page */}
       <Link to="/"> {/* Link to home */}
-        <h1>{pageTitle}</h1> {/* Display the page title */}
+        <h1>{pageTitle}</h1>
       </Link>
       {!isHomePage && <HiddenBack />} {/* Render HiddenBack if not on home page */}
     </StyledHeader>
