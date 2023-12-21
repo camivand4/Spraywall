@@ -1,17 +1,20 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 
-    font-family: 'Nunito', sans-serif;
-    font-family: 'Roboto', sans-serif;
-    font-family: 'Source Sans 3', sans-serif;
-  }
-  
-  html,
-  body {
-    background-color: #161616;
-    color: white;
-  }
+  font-family: "Nunito", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-family: "Source Sans 3", sans-serif;
+}
 
-  
+html,
+body {
+  background-color: #161616;
+  color: white;
+}
+
+span,
+p {
+  font-size: 1.2rem;
+}
