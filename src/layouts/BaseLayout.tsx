@@ -4,22 +4,20 @@ import { useLocation } from "react-router-dom";
 
 type Props = {
   children: JSX.Element;
-  isBoulder: boolean;
 };
 
-const BaseLayoutStyle = styled.div<{ isBoulder: boolean }>`
-  padding: ${({ isBoulder }) => (isBoulder ? '0' : '2.5rem 2rem')};
-
+const BaseLayoutStyle = styled.div<{ isboulder: string }>`
+  padding: ${({ isboulder }) => (isboulder === "true" ? '0' : '2.5rem 2rem')};
 `;
 
 const BaseLayout = ({ children }: Props) => {
   const location = useLocation();
-  const isBoulder = location.pathname === "/boulder";
+  const isBoulder = (location.pathname === "/boulder").toString(); // Convert boolean to string
 
   return (
     <>
       {!isBoulder && <Header />}
-      <BaseLayoutStyle isBoulder={isBoulder}>{children}</BaseLayoutStyle>
+      <BaseLayoutStyle isboulder={isBoulder}>{children}</BaseLayoutStyle>
     </>
   );
 };
