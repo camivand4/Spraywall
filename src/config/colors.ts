@@ -2,6 +2,7 @@ const Colors = {
   background: {
     dark: "#161616",
     light: "#323232",
+    white: "#e5e5e5",
   },
   accent: "#981DF8",
   text: {
