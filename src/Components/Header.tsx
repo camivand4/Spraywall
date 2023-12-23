@@ -1,41 +1,35 @@
-// Import necessary modules and components
-import styled from "styled-components"; // Styled-components for styling
-import Colors from "../config/colors"; // Import color configurations
-import BackButton from "./BackButton"; // Import BackButton component
-import { Link, useLocation } from "react-router-dom"; // React Router components for navigation
+import styled from "styled-components"; 
+import Colors from "../config/colors"; 
+import BackButton from "./BackButton"; 
+import { Link, useLocation } from "react-router-dom"; 
 
-// Define a styled component to create a hidden back button
 const HiddenBack = styled.div`
-  width: 1.2rem; /* Set width for the hidden back button */
+  width: 1.2rem; 
 `;
 
-// Define interface for StyledHeaderProps with isHomePage boolean property
+// Define interface for StyledHeaderProps with ishomepage boolean property
 interface StyledHeaderProps {
-  isHomePage: boolean;
+  ishomepage?: boolean;
 }
 
-// Style the header using styled-components based on the isHomePage prop
 const StyledHeader = styled.header<StyledHeaderProps>`
-  /* Styling for the header */
-  padding: 1rem 2rem; /* Set padding */
-  background-color: ${Colors.background.light}; /* Set background color from colors configuration */
-  display: flex; /* Set flex display */
-  justify-content: ${({ isHomePage }) =>
-    isHomePage ? "center" : "space-between"}; /* Adjust content alignment based on isHomePage */
+  padding: 1rem 2rem;
+  background-color: ${Colors.background.light}; 
+  display: flex; 
+  justify-content: ${( ishomepage ) =>
+    ishomepage ? "center" : "space-between"};
 
-  /* Styling for h1 tag within header */
   h1 {
-    font-size: 1.5rem; /* Set font size */
-    background: transparent; /* Transparent background */
-    padding: 0 2rem; /* Set padding */
-    color: inherit; /* Inherit text color */
-    text-decoration: none; /* Remove text decoration */
+    font-size: 1.5rem; 
+    background: transparent; 
+    padding: 0 2rem; 
+    color: inherit; 
+    text-decoration: none; 
   }
 
-  /* Styling for anchor tag within header */
   a {
-    color: inherit; /* Inherit text color */
-    text-decoration: none; /* Remove text decoration */
+    color: inherit; 
+    text-decoration: none; 
   }
 `;
 
@@ -63,15 +57,15 @@ const getPageTitle = (pathname: string) => {
 export default function Header() {
   const location = useLocation(); // Get the current location using useLocation hook
   const pageTitle = getPageTitle(location.pathname); // Get the page title based on pathname
-  const isHomePage = location.pathname === "/"; // Check if it's the home page
+  const ishomepage = location.pathname === "/"; // Check if it's the home page
 
   return (
-    <StyledHeader isHomePage={isHomePage}>
-      {!isHomePage && <BackButton />} {/* Render BackButton if not on home page */}
+    <StyledHeader ishomepage={ishomepage}>
+      {!ishomepage && <BackButton />} {/* Render BackButton if not on home page */}
       <Link to="/"> {/* Link to home */}
         <h1>{pageTitle}</h1>
       </Link>
-      {!isHomePage && <HiddenBack />} {/* Render HiddenBack if not on home page */}
+      {!ishomepage && <HiddenBack />} {/* Render HiddenBack if not on home page */}
     </StyledHeader>
   );
 }
