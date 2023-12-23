@@ -6,18 +6,24 @@ type Props = {
   children: JSX.Element;
 };
 
-const BaseLayoutStyle = styled.div<{ isboulder: boolean }>`
+type BaseLayoutStyleProps = {
+  isboulder?: boolean; // isboulder transient prop
+};
+
+const BaseLayoutStyle = styled.div<BaseLayoutStyleProps>`
   padding: ${({ isboulder }) => (isboulder === true ? '0' : '2.5rem 2rem')};
 `;
 
 const BaseLayout = ({ children }: Props) => {
   const location = useLocation();
-  const isBoulder = (location.pathname === "/boulder");
+  const isBoulder = location.pathname === "/boulder";
 
   return (
     <>
       {!isBoulder && <Header />}
-      <BaseLayoutStyle isboulder={isBoulder}>{children}</BaseLayoutStyle>
+      <BaseLayoutStyle isboulder={isBoulder ? true : undefined}>
+        {children}
+      </BaseLayoutStyle>
     </>
   );
 };
