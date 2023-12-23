@@ -6,6 +6,7 @@ import Auth from "./Pages/Auth";
 import Gym from "./Pages/Gym";
 import Gyms from "./Pages/Gyms";
 import Boulder from "./Pages/Boulder";
+import Camera from "./Pages/Camera";
 import BaseLayout from "./layouts/BaseLayout";
 
 function App() {
@@ -24,7 +25,8 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/gyms" element={<Gyms />} />
           <Route path="/gyms/:id" element={<Gym />} />
-          <Route path="/gyms/:id/:boulder" element={<Boulder />} />
+          <Route path="/boulder" element={<Boulder />} />
+          <Route path="/camera" element={<Camera />} />
           <Route path="/auth" element={<Auth />} />
         </Routes>
       </BaseLayout>
