@@ -7,21 +7,23 @@ type Props = {
   isBoulder: boolean;
 };
 
-const BaseLayoutStyle = styled.div`
-  padding: 2.5rem 2rem;
+const BaseLayoutStyle = styled.div<{ isBoulder: boolean }>`
+  padding: ${({ isBoulder }) => (isBoulder ? '0' : '2.5rem 2rem')};
+
 `;
 
 const BaseLayout = ({ children }: Props) => {
   const location = useLocation();
   const isBoulder = location.pathname === "/boulder";
 
+  if (isBoulder) {
+    console.log('test');
+  }
+
   return (
     <>
-      {!isBoulder && (
-        <Header></Header>
-      )}
-      <BaseLayoutStyle>{children}</BaseLayoutStyle>
-
+      {!isBoulder && <Header />}
+      <BaseLayoutStyle isBoulder={isBoulder}>{children}</BaseLayoutStyle>
     </>
   );
 };
