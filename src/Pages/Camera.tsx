@@ -1,7 +1,7 @@
 const Camera = () => {
   return (
     <div>
-      
+      d
     </div>
   )
 }
