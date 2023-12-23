@@ -16,10 +16,6 @@ const BaseLayout = ({ children }: Props) => {
   const location = useLocation();
   const isBoulder = location.pathname === "/boulder";
 
-  if (isBoulder) {
-    console.log('test');
-  }
-
   return (
     <>
       {!isBoulder && <Header />}
