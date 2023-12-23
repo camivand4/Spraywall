@@ -7,6 +7,8 @@ import {
 
 export default function Boulder() {
 
+  // https://www.npmjs.com/package/react-quick-pinch-zoom
+
   return (
     <TransformWrapper>
       <TransformComponent>
