@@ -9,14 +9,14 @@ const HiddenBack = styled.div`
 
 // Define interface for StyledHeaderProps with ishomepage boolean property
 interface StyledHeaderProps {
-  ishomepage?: boolean; // Making ishomepage a transient prop
+  ishomepage?: boolean;
 }
 
 const StyledHeader = styled.header<StyledHeaderProps>`
   padding: 1rem 2rem;
   background-color: ${Colors.background.light}; 
   display: flex; 
-  justify-content: ${({ ishomepage }) =>
+  justify-content: ${( ishomepage ) =>
     ishomepage ? "center" : "space-between"};
 
   h1 {
@@ -60,7 +60,7 @@ export default function Header() {
   const ishomepage = location.pathname === "/"; // Check if it's the home page
 
   return (
-    <StyledHeader ishomepage={ishomepage ? true : undefined}>
+    <StyledHeader ishomepage={ishomepage}>
       {!ishomepage && <BackButton />} {/* Render BackButton if not on home page */}
       <Link to="/"> {/* Link to home */}
         <h1>{pageTitle}</h1>
