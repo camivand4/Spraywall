@@ -1,23 +1,24 @@
-// import styled from "styled-components";
-// import Colors from "../config/colors";
-import {
-  TransformWrapper,
-  TransformComponent
-} from "react-zoom-pan-pinch";
+import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
+import styled from "styled-components";
+
+const ImageContainer = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+const Image = styled.img`
+  width: 100%;
+  max-height: 95vh;
+`;
 
 export default function Boulder() {
-
-  // https://www.npmjs.com/package/react-quick-pinch-zoom
-
   return (
-    <TransformWrapper>
-      <TransformComponent>
-        <img
-          src="https://i.ibb.co/MDm71F7/IMG-20231104-211634.jpg"
-          alt="spraywall image"
-          width="100%"
-        />
-      </TransformComponent>
-    </TransformWrapper>
+    <ImageContainer>
+      <TransformWrapper>
+        <TransformComponent>
+          <Image src="https://i.ibb.co/0BBrmFJ/realcliumb.jpg" alt="spraywall image" />
+        </TransformComponent>
+      </TransformWrapper>
+    </ImageContainer>
   );
 }
